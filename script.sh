@@ -8,7 +8,7 @@ tr '[:lower:]'  '[:upper:]'< out.2 > out.3
 #Cambiar vacíos por \N que no están al final
 sed 's#;;#;\\N;#' out.3 > out.4
 #Cambiar vacíos del final 
-sed 's/;$/\\N/g' out.4 > out.5
+sed 's/;$/;\\N/' out.4 > out.5
 #punto para decimales
 sed 's#,#.#g' out.5 > out.6
 #Punto y coma cambiado por comas
